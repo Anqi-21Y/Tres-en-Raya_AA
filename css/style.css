@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+#app {
+    text-align: center;
+}
+
+/* tablero - Grid de 3x3 */
+.tablero {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    gap: 10px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* celdas individuales */
+.celda {
+    background-color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.celda:hover {
+    background-color: #f9f9f9;
+    transform: scale(1.05);
+}
+
+/* feedback visual - jugador X */
+.jugador-x {
+    background-color: #FFD6D6;
+    color: #D32F2F;
+}
+
+/* feedback visual - Jugador O */
+.jugador-o {
+    background-color: #D6E5FF;
+    color: #1976D2;
+}
+
+/* animacion al ocupar celda */
+.jugador-x, .jugador-o {
+    animation: aparecerCelda 0.3s ease;
+}
+
+@keyframes aparecerCelda {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}

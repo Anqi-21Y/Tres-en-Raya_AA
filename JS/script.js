@@ -1,10 +1,8 @@
 /**parte de fronted 
  * Usamos esto para generar el tablero y probar la lógica.
- * Cuando el compañero de Frontend termine, BORRAR esta función
- * y usar la suya (ej: inicializarJuego()).
 */
 
-function initTableroTemporal(){
+function inicializarJuego(){
     const app = document.getElementById('app');
     const tablero = document.createElement('div');
 
@@ -185,5 +183,5 @@ function manejarClick(evento){
     }
 
 
-// start ... cuando todo esta bien que cambiar el nombre de iniciarJuego()
-initTableroTemporal();
+// start ...
+inicializarJuego();
